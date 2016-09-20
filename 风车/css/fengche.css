@@ -1,0 +1,64 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0dcb0;
+}
+
+main {
+    background-image: url('../images/caodi.png');
+    background-size: contain;
+    width: 1000px;
+    height: 500px;
+    float: left;
+    position: absolute;
+}
+
+div {
+    position: absolute;
+    background-size: contain;
+    background-image: url('../images/fengche.png');
+    animation-name: rotate-round;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+div:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    left: 140px;
+    top: 55px;
+}
+
+div:nth-child(2) {
+    width: 200px;
+    height: 200px;
+    left: 604px;
+    top: 210px;
+}
+
+div:nth-child(3) {
+    width: 100px;
+    height: 100px;
+    left: 465px;
+    top: 310px;
+}
+
+@keyframes rotate-round {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+div:hover {
+    animation-duration: 1s;
+}
