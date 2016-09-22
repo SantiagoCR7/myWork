@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>省市区县联动</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<ul>
+    <li>
+        省
+        <select name="province" id="province" onchange="proChange()">
+            <option value="0">请选择</option>
+        </select>
+
+        市
+        <select name="city" id="city" onchange="cityChange()">
+            <option value="0">请选择</option>
+        </select>
+
+        区(县)
+        <select name="country" id="country">
+            <option value="0">请选择</option>
+        </select>
+    </li>
+</ul>
+<script src="js/index.js"></script>
+</body>
+</html>
