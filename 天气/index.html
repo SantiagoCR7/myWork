@@ -11,7 +11,10 @@
 <body>
 <div style="display: flex;justify-content: center;align-items: center;">请输入城市名
     <input type="text" id="cityName">
-    <a href="javascript:void(0)" class="btn btn-danger" role="button" onclick="doSearch()">查询</a>
+    <button type="button" class="btn btn-danger" onclick="doSearch()">
+        <span class="glyphicon glyphicon-search"></span>
+        查询
+    </button>
 </div>
 
 <div class="container" id="content">
@@ -19,8 +22,8 @@
 </div>
 
 <script id="table" type="text/html">
-    <table class="table">
-        <tr>
+    <table class="table table-bordered">
+        <tr class="info">
             <th>日期</th>
             <th>星期</th>
             <th>风力</th>
@@ -30,7 +33,7 @@
             <th>天气</th>
         </tr>
         {{each list as value i}}
-        <tr>
+        <tr class="success">
             <td>{{value.date}}</td>
             <td>{{value.week}}</td>
             <td>{{value.fengli}}</td>

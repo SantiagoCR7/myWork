@@ -24,14 +24,15 @@ function getWeather(cityName) {
             console.log(arrToday);
 
             var arr = [];
+
+            for (var i = 0; i < arrHistory.length; i++) {
+                arr.push(arrHistory[i]);
+            }
+
             arr.push(arrToday);
 
             for (var i = 0; i < arrForecast.length; i++) {
                 arr.push(arrForecast[i]);
-            }
-
-            for (var i = 0; i < arrHistory.length; i++) {
-                arr.push(arrHistory[i]);
             }
 
             var html = template('table', {list: arr});
@@ -39,6 +40,7 @@ function getWeather(cityName) {
         },
         error: function (err) {
             console.log(err);
+            alert('输入的城市名不正确');
         }
     })
 }
