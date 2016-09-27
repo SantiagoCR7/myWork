@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天气预报</title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+</head>
+<body>
+<div style="display: flex;justify-content: center;align-items: center;">请输入城市名
+    <input type="text" id="cityName">
+    <a href="javascript:void(0)" class="btn btn-danger" role="button" onclick="doSearch()">查询</a>
+</div>
+
+<div class="container" id="content">
+
+</div>
+
+<script id="table" type="text/html">
+    <table class="table">
+        <tr>
+            <th>日期</th>
+            <th>星期</th>
+            <th>风力</th>
+            <th>风向</th>
+            <th>最高气温</th>
+            <th>最低气温</th>
+            <th>天气</th>
+        </tr>
+        {{each list as value i}}
+        <tr>
+            <td>{{value.date}}</td>
+            <td>{{value.week}}</td>
+            <td>{{value.fengli}}</td>
+            <td>{{value.fengxiang}}</td>
+            <td>{{value.hightemp}}</td>
+            <td>{{value.lowtemp}}</td>
+            <td>{{value.type}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
